@@ -7,8 +7,8 @@ img:hover, button:hover {
 }
 
 .container {
-  min-height: 100vh;  /* make the webpage the whole height of the device */
-  overflow-x: hidden; /* removes bottom blank space (possibly a bug) on mobile/tiny mobiles */
+  min-height: 100vh;  /* makes the webpage the whole height of the device */
+  overflow-x: auto; /* removes the  mysterious bottom white space on mobile/tiny devices */
 
   display: grid;
   grid-template: 1fr 4fr / 1fr 6fr;
@@ -48,6 +48,10 @@ img:hover, button:hover {
   filter: invert(30%) sepia(18%) saturate(174%) hue-rotate(353deg) brightness(98%) contrast(88%);
 }
 
+.header > .top > .left > img:hover {
+  filter: invert(46%) sepia(8%) saturate(216%) hue-rotate(349deg) brightness(86%) contrast(83%);
+}
+
 .header > .top > .left input {
   width: max(60%, 230px);   /* minimum boundary for not shrinking the input under 230px */
 
@@ -80,9 +84,17 @@ img:hover, button:hover {
   filter: invert(30%) sepia(18%) saturate(174%) hue-rotate(353deg) brightness(98%) contrast(88%);
 }
 
-.header > .top > .right :nth-child(2){
+.header > .top > .right > img:hover {
+  filter: invert(46%) sepia(8%) saturate(216%) hue-rotate(349deg) brightness(86%) contrast(83%);
+}
+
+  .header > .top > .right :nth-child(2){
   width: 3rem;
   height: 3rem;
+  filter: none;
+}
+
+.header > .top > .right :nth-child(2):hover {
   filter: none;
 }
 
@@ -200,6 +212,12 @@ img:hover, button:hover {
 
   font-weight: 700;
   color: white;
+
+  cursor: pointer;
+}
+
+.sidebar p:hover {
+  color: #e0ddd7;
 }
 
 .sidebar img {
@@ -211,6 +229,10 @@ img:hover, button:hover {
   filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(299deg) brightness(104%) contrast(105%);
 
   margin-bottom: 0.1rem;
+}
+
+.sidebar img:hover {
+  filter: invert(95%) sepia(10%) saturate(107%) hue-rotate(2deg) brightness(96%) contrast(86%);
 }
 
 /* main */
@@ -267,6 +289,9 @@ img:hover, button:hover {
   gap: 1.3rem;
 }
 
+.main > .left > .cards > .card > .images > img:hover {
+  filter: invert(46%) sepia(8%) saturate(216%) hue-rotate(349deg) brightness(86%) contrast(83%);
+}
 .main > .left > .cards > .card > .images > img{
   width: 1.2rem;
   height: 1.2rem;

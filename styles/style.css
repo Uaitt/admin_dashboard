@@ -7,7 +7,8 @@ img:hover, button:hover {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 100vh;  /* make the webpage the whole height of the device */
+  overflow-x: hidden; /* removes bottom blank space (possibly a bug) on mobile/tiny mobiles */
 
   display: grid;
   grid-template: 1fr 4fr / 1fr 6fr;
@@ -357,3 +358,4 @@ img:hover, button:hover {
   font-weight: 700;
   color: #57534e;
 }
+

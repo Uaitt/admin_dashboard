@@ -5,6 +5,7 @@ html {
 img:hover, button:hover {
   cursor: pointer;
 }
+
 .container {
   min-height: 100vh;  /* this makes the height of the dashboard at least as big as the viewport */
 

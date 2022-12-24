@@ -9,7 +9,7 @@ img:hover, button:hover {
   min-height: 100vh;  /* this makes the height of the dashboard at least as big as the viewport */
 
   display: grid;
-  grid-template: 1fr 4fr / 1fr 4fr;
+  grid-template: 1fr 4fr / 1fr 6fr;
 }
 
 /* header */
@@ -18,7 +18,6 @@ img:hover, button:hover {
   display: grid;
   grid-template-rows: 1fr 2fr;
 
-  border-bottom: 1px solid black;
   padding: 0.8rem;
 }
 
@@ -42,6 +41,7 @@ img:hover, button:hover {
   height: 1.4rem;
   align-self: center;
   justify-self: end;
+  filter: invert(30%) sepia(18%) saturate(174%) hue-rotate(353deg) brightness(98%) contrast(88%);
 }
 
 .header > .top > .left input {
@@ -51,6 +51,7 @@ img:hover, button:hover {
   border-radius: 1rem;
   background: #e5e5e5;
   padding: 0.4rem 0.4rem;
+  color: #57534e;
 }
 
 .header > .top > .right {
@@ -65,15 +66,18 @@ img:hover, button:hover {
   justify-self: end;
   width: 1.6rem;
   height: 1.6rem;
+  filter: invert(30%) sepia(18%) saturate(174%) hue-rotate(353deg) brightness(98%) contrast(88%);
 }
 
 .header > .top > .right :nth-child(2){
   width: 3rem;
   height: 3rem;
+  filter: none;
 }
 
 .header > .top > .right > p {
   font-weight: 700;
+  color: #57534e;
 }
 
 .header > .bottom {
@@ -94,6 +98,7 @@ img:hover, button:hover {
 .header > .bottom > .left > p {
   font-weight: 700;
   font-size: 1.3rem;
+  color: #57534e;
 }
 
 .header > .bottom > .left ::first-line {
@@ -185,3 +190,137 @@ img:hover, button:hover {
   filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(299deg) brightness(104%) contrast(105%);
 }
 
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 1.5rem;
+
+  background: #dadee6;
+  padding: 0 1.5rem;
+}
+
+.main > .left > p {
+  font-weight: 700;
+  color: #57534e
+}
+
+.main > .left > .cards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.main > .left > .cards > .card {
+  background: white;
+  display: grid;
+
+  padding: 1.3rem;
+  border-radius: 0.8rem;
+  border-left: 0.5rem solid #57534e;
+}
+
+.main > .left > .cards > .card > p {
+  font-size: 0.8rem;
+  color: #8b827c;
+}
+.main > .left > .cards > .card > p::first-line {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #57534e;
+}
+
+.main > .left > .cards > .card > .images {
+  align-self: end;
+  justify-self: end;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.3rem;
+}
+
+.main > .left > .cards > .card > .images > img{
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: invert(30%) sepia(18%) saturate(174%) hue-rotate(353deg) brightness(98%) contrast(88%);
+}
+
+.main > .right {
+  min-width: 17rem;
+}
+
+.main > .right > .announcements > .cards {
+  display: grid;
+  justify-items: center;
+
+  padding: 0 2.3rem;
+  background: white;
+  border-radius: 0.8rem;
+}
+
+.main > .right > .announcements > p {
+  font-weight: 700;
+  color: #57534e;
+}
+
+.main > .right > .announcements > .cards > div {
+  padding: 1.4rem;
+}
+
+.main > .right > .announcements > .cards > div > p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #8b827c;
+}
+
+.main > .right > .announcements > .cards > div > p::first-line {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #57534e;
+}
+
+.main > .right > .announcements > .cards .community {
+  border-top: 1.9px solid #a8a19c;
+  border-bottom: 1.7px solid #a8a19c;
+}
+
+.main > .right > .trending > .users {
+  background-color: white;
+}
+.main > .right > .trending > p {
+  font-weight: 700;
+  color: #57534e;
+}
+
+.main > .right > .trending > .users p {
+  margin: 0;
+}
+
+.main > .right > .trending > .users {
+  padding: 1.4rem 0;
+  display: grid;
+  gap: 1.3rem;
+  border-radius: 0.8rem;
+}
+.main > .right > .trending > .users > .user {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 4fr;
+  gap: 1rem;
+}
+
+.main > .right > .trending > .users > .user > img {
+  justify-self: end;
+  width: 3rem;
+  height: 3rem;
+}
+
+.main > .right > .trending > .users > .user > p {
+  color: #57534e
+}
+
+.main > .right > .trending > .users > .user > p::first-line {
+  font-weight: 700;
+  color: #57534e;
+}
